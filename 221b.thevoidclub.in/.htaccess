@@ -1,0 +1,10 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^221b\.thevoidclub\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.221b\.thevoidclub\.in$
+RewriteRule ^251280$ "https\:\/\/drive\.google\.com\/file\/d\/1nitI0WEZ4j6OMUoj9eVG8OcPlDh8ujK4\/view" [R=301,L]
+RewriteCond %{HTTP_HOST} ^221b\.thevoidclub\.in$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.221b\.thevoidclub\.in$
+RewriteRule ^discord$ "https\:\/\/discord\.gg\/4BYBQf6RYp" [R=301,L]
