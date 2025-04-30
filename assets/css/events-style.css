@@ -1,27 +1,32 @@
-:root{
-  --darkest-black:#000;
-  --darker-black:#2d3032;
-  --lighter-black:#555759;
-  --lighter-gray:#d2d3d3;
-  --primary-purple:#6969ff;
-  --darker-gray:#7d7580;
-  --text-white:#fff;
+:root {
+  --darkest-black: #000;
+  --darker-black: #2d3032;
+  --lighter-black: #555759;
+  --lighter-gray: #d2d3d3;
+  --primary-purple: #6969ff;
+  --darker-gray: #7d7580;
+  --text-white: #fff;
 }
 
-.body{
-  background: var(--darkest-black);
-}
 
 #breadcrumbs {
   color: var(--text-white);
 }
 
-#breadcrumbs h2{
+#breadcrumbs h2 {
   font-family: Origin-tech;
 }
 
 .event-details {
   padding-top: 40px;
+  
+}
+.event
+{
+  background-color: var(--darker-black);
+  margin: 90px 200px;
+  border-radius: 5px;
+  
 }
 
 .event-details .event-details-slider img {
@@ -36,18 +41,20 @@
 .event-details .event-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: var(--darkest-black) ;
+  background-color: var(--darkest-black);
   opacity: 1;
-  border: 1px solid var(--primary-purple) ;
+  border: 1px solid var(--primary-purple);
 }
 
 .event-details .event-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--primary-purple) ;
+  background-color: var(--primary-purple);
 }
 
 .event-details .event-info {
   padding: 30px;
-  background:var(--darker-black) ;
+  background: var(--darker-black);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .event-details .event-info h3 {
@@ -57,7 +64,7 @@
   margin-bottom: 20px;
   padding-bottom: 20px;
   color: var(--text-white);
-  border-bottom: 1px solid var(--lighter-gray) ;
+  border-bottom: 1px solid var(--lighter-gray);
 }
 
 .event-details .event-info ul {
@@ -70,14 +77,17 @@
 .event-details .event-info ul li + li {
   margin-top: 10px;
 }
-.event-info strong{
+
+.event-info strong {
   color: var(--primary-purple);
 }
+
 .event-info a {
   color: var(--text-white);
   font-weight: bolder;
   text-decoration-line: underline;
 }
+
 .event-details .event-description {
   padding-top: 30px;
 }
@@ -86,21 +96,39 @@
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 20px;
+  color: var(--text-white);
 }
 
 .event-details .event-description p {
   padding: 0;
+  color: var(--text-white);
 }
 
-.general-guidelines-ul{
+.general-guidelines-ul {
   color: var(--text-white);
   font-size: 1.2rem;
   margin-right: 10%;
   margin-left: 10%;
 }
 
-.guidelines-heading{
+.guidelines-heading {
   color: var(--primary-purple);
 }
 
+/* Added for better readability with the new background */
+.event-details .event-description,
+.event-details .event-info {
+  backdrop-filter: blur(2px);
+}
 
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .general-guidelines-ul {
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  
+  .event-details .event-info {
+    padding: 20px;
+  }
+}

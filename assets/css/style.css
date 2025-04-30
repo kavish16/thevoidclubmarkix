@@ -19,7 +19,9 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--darker-black);
   overflow-x: hidden;
-  background: var(--darkest-black);
+  background-image: url(/assets/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 li {
@@ -30,10 +32,11 @@ a {
   text-decoration: none;
   color: var(--primary-purple);
   z-index: 2;
+
 }
 
 a:hover {
-  color: var(--primary-purple);
+  color: blueviolet;
   text-decoration: none;
   z-index: 2;
 }
@@ -55,6 +58,27 @@ h6 {
   width: 100%;
   height: 100%;
 }
+
+/* FOR VIDEO BACKGROUND 
+#vid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+}
+
+#background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+*/
 
 #announcement {
   position: fixed;
@@ -142,38 +166,59 @@ h6 {
 
 /* particles */
 #particles-js {
-  
-  
-  background: radial-gradient(circle at 20% 40%, #00008b 0%, transparent 40%),
-              radial-gradient(circle at 80% 60%, #000 0%, transparent 50%),
-            #000; /* fallback dark base */
-  background-attachment: fixed;
+
+
+
+
   background-size: cover;
-  color: white;
+
   background-repeat: no-repeat;
-  position: relative; /* Required for absolute positioning of child */
+  position: relative;
+  /* Required for absolute positioning of child */
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
+  /* Full viewport height */
   display: flex;
-  justify-content: center; /* Horizontal center */
-  align-items: center; /* Vertical center */
+  justify-content: center;
+  /* Horizontal center */
+  align-items: center;
+  /* Vertical center */
   z-index: -1;
+
+
+
+
 }
+
+
+
 #logo {
-  text-align: center; /* Ensures logo stays centered */
+  text-align: center;
+  /* Ensures logo stays centered */
 }
 
 #logo img {
-  max-width: 80%; /* Prevents overflow on small screens */
-  height: auto; /* Maintain aspect ratio */
-  max-height: 400px; /* Optional: Limit max size */
-  animation: float 3s ease-in-out infinite; /* Optional: Floating effect */
+  max-width: 80%;
+  /* Prevents overflow on small screens */
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 300px;
+  /* Optional: Limit max size */
+  animation: float 3s ease-in-out infinite;
+  /* Optional: Floating effect */
 }
 
 /* Optional floating animation */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 
@@ -243,7 +288,7 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   transition: all 0.5s;
-  background: var(--darkest-black);
+
 }
 
 #header .logo h1 {
@@ -285,7 +330,7 @@ h6 {
 
 .navbar {
   padding: 0;
-  background-color: var(--darkest-black);
+
 }
 
 .navbar ul {
@@ -337,7 +382,7 @@ h6 {
   z-index: 99;
   opacity: 0;
   visibility: hidden;
-  background: #000;
+  background-image: url(/assets/img/artistic-blurry-colorful-wallpaper-background.jpg);
   transition: 0.3s;
 }
 
@@ -418,13 +463,13 @@ h6 {
 }
 
 .navbar-mobile {
-  position: fixed;
+
   overflow: hidden;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  background: var(--text-white);
+  background-image: url(/assets/img/artistic-blurry-colorful-wallpaper-background.jpg);
   transition: 0.3s;
   z-index: 999;
 }
@@ -443,7 +488,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: var(--darkest-black);
+  background-image: url(/assets/img/artistic-blurry-colorful-wallpaper-background.jpg);
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -518,6 +563,10 @@ h6 {
   color: #fff;
 }
 
+#counts
+{
+  background: url(../img/Banner_bg.png) fixed;
+}
 .btn-default {
   font-weight: 600;
   font-size: 16px;
@@ -539,8 +588,9 @@ h6 {
 
 /* Counter */
 .counts {
-  background: url(../img/Banner_bg.png) fixed;
+
   padding: 80px 0 60px 0;
+  
 }
 
 .counts .counters span {
@@ -561,7 +611,7 @@ h6 {
 section {
   padding: 60px 0;
   overflow: hidden;
-  background: var(--darkest-black);
+
 }
 
 .section-header .section-title {
@@ -583,14 +633,18 @@ section {
   display: block;
   width: 60px;
   height: 3px;
-  background: var(--primary-purple);
+
   margin: 0 auto;
   margin-bottom: 20px;
 }
+#abou
+{
+ margin:auto;
+ margin-top: 100px;
+ 
 
-.section-bg {
-  background: var(--darkest-black);
 }
+
 
 #more-features {
   padding: 60px 0 60px 0;
@@ -600,7 +654,7 @@ section {
 #more-features .box {
   padding: 40px;
   margin-bottom: 30px;
-  background: var(--darkest-black);
+
   transition: 0.4s;
   height: 100%;
 }
@@ -694,9 +748,6 @@ section {
   z-index: 2;
 }
 
-.faq {
-  background: var(--darkest-black);
-}
 
 .faq .faq-list {
   padding: 0 100px;
@@ -960,6 +1011,13 @@ section {
   }
 }
 
+#header {
+  position: relative !important;
+  top: auto !important;
+
+}
+
+
 #video .container {
   overflow: hidden;
   position: relative;
@@ -981,7 +1039,7 @@ section {
 }
 
 #footer {
-  background: var(--darkest-black);
+
   color: #fff;
   font-size: 14px;
   text-align: center;
@@ -1047,59 +1105,3 @@ section {
 /*--------------------------------------------------------------
 # Team
 --------------------------------------------------------------*/
-.team {
-  background: var(--darkest-black);
-  padding: 60px 0;
-}
-
-.team .member {
-  margin-bottom: 20px;
-  overflow: hidden;
-  border-radius: 5px;
-  background: var(--darker-black);
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-}
-
-.team .member .member-img {
-  position: relative;
-  overflow: hidden;
-}
-
-
-.team .member .member-info {
-  padding: 25px 15px;
-}
-
-.team .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
-  color: var(--text-white);
-  text-align: center;
-}
-
-.team .member .member-info span {
-  display: block;
-  font-size: 15px;
-  font-weight: 400;
-  color: #9d4edd;
-  text-align: center;
-}
-
-.team .member .member-info p {
-  font-style: italic;
-  font-size: 14px;
-  line-height: 26px;
-  color: #777777;
-}
-
-.team .member:hover .social {
-  opacity: 1;
-  bottom: 15px;
-}
-body {
-  background: url('assets/img/artistic-blurry-colorful-wallpaper-background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  margin: 0;
-  min-height: 100vh;
-}

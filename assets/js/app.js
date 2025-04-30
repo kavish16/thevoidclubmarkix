@@ -1,8 +1,8 @@
 document.fonts.ready.then(() => {
   tsParticles.load("particles-js", {
     particles: {
-      number: { value: 30 },
-      color: { value: "#ffffff" }, // Bright white
+      number: { value: 40 },
+      color: { value: "#FFFFFF" }, // Bright white
       shape: {
         type: "char",
         options: {
@@ -49,3 +49,5 @@ document.fonts.ready.then(() => {
     retina_detect: true
   });
 });
+document.getElementById("background-video").playbackRate = 1;
+
