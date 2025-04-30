@@ -16,10 +16,11 @@
 }
 
 body {
+  background-image: url("assets/img/bg.jpg");
   font-family: "Open Sans", sans-serif;
   color: #2d3032;
   overflow-x: hidden;
-  background-image:url(/assets/img/bg.jpg);
+  
   background-repeat: no-repeat;
   background-size: cover;
 }
