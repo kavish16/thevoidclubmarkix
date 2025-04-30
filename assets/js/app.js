@@ -1,7 +1,7 @@
 document.fonts.ready.then(() => {
   tsParticles.load("particles-js", {
     particles: {
-      number: { value: 40 },
+      number: { value: 25 },
       color: { value: "#FFFFFF" }, // Bright white
       shape: {
         type: "char",
