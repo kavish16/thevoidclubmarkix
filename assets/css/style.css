@@ -17,9 +17,9 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: var(--darker-black);
+  color: #2d3032;
   overflow-x: hidden;
-  background-image: url(/assets/img/background.jpg);
+  background-image: url(/assets/img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
