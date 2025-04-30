@@ -180,9 +180,9 @@ h6 {
   height: 100vh;
   /* Full viewport height */
   display: flex;
-  justify-content: center;
+  justify-content:center;
   /* Horizontal center */
-  align-items: center;
+  align-items:center;
   /* Vertical center */
   z-index: -1;
 
@@ -199,14 +199,15 @@ h6 {
 }
 
 #logo img {
-  max-width: 80%;
+  max-width: 100%;
   /* Prevents overflow on small screens */
   height: auto;
   /* Maintain aspect ratio */
-  max-height: 300px;
+  max-height: 1400px;
   /* Optional: Limit max size */
   animation: float 3s ease-in-out infinite;
   /* Optional: Floating effect */
+  padding-bottom: 240px;
 }
 
 /* Optional floating animation */
@@ -781,7 +782,89 @@ section {
   outline: none;
   cursor: pointer;
 }
+.about .flip-clock {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  perspective: 1000px;
+}
 
+.flip-card {
+  position: relative;
+  width: 100px;
+  height: 140px;
+  margin: 0 5px;
+}
+
+.flip-card div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  background: #2a2a2a;
+  color: #ffffff;
+  border-radius: 8px;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transform-origin: bottom;
+  perspective: 1000px;
+}
+
+.flip-card div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #161616;
+  transform: translateZ(-1px) rotateX(2deg);
+  border-radius: 8px;
+}
+
+.flip-card div::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to bottom, #655366 0%, transparent 100%);
+  box-shadow: 0 0 8px rgba(101, 83, 102, 0.5);
+}
+
+.flip-card span {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7em;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+  }
+  50% {
+    transform: rotateX(-90deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: rotateX(0deg);
+    transform-origin: bottom;
+  }
+}
+.flipping {
+  animation: flip 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .faq .faq-list .icon-help {
   font-size: 24px;
   position: absolute;
