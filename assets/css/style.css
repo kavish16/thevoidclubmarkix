@@ -943,6 +943,12 @@ section {
 
 
 /* Event */
+.event-wrap img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 .event .event-item {
   margin-bottom: 30px;
 }
