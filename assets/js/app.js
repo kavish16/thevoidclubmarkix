@@ -38,8 +38,8 @@ document.fonts.ready.then(() => {
     },
     interactivity: {
       events: {
-        onhover: { enable: true, mode: "repulse" },
-        onclick: { enable: true, mode: "push" }
+        onhover: { enable: true, mode: "repulse" }
+        
       },
       modes: {
         repulse: { distance: 100, duration: 0.4 },
