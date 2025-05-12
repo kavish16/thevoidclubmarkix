@@ -1,7 +1,7 @@
 document.fonts.ready.then(() => {
   tsParticles.load("particles-js", {
     particles: {
-      number: { value: 25 },
+      number: { value: 10 },
       color: { value: "#FFFFFF" }, // Bright white
       shape: {
         type: "char",
@@ -25,7 +25,7 @@ document.fonts.ready.then(() => {
           }
         }
       },
-      opacity: { value: 1, random: true },
+      opacity: { value: 0.6, random: true },
       size: { value: 14, random: true },
       move: {
         enable: true,
