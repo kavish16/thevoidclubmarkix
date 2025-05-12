@@ -49,5 +49,5 @@ document.fonts.ready.then(() => {
     retina_detect: true
   });
 });
-document.getElementById("background-video").playbackRate = 1;
+
 
