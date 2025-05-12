@@ -25,7 +25,7 @@ document.fonts.ready.then(() => {
           }
         }
       },
-      opacity: { value: 0.5, random: true },
+      opacity: { value: 0.4, random: true },
       size: { value: 14, random: true },
       move: {
         enable: true,
