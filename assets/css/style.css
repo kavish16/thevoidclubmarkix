@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url(../img/bg.jpg);
+  background-image: url(../img/bg.jpeg);
   font-family: "Open Sans", sans-serif;
   color: #2d3032;
   overflow-x: hidden;
@@ -195,6 +195,7 @@ h6 {
 
 #logo {
   text-align: center;
+  z-index: 3;
   /* Ensures logo stays centered */
 }
 
