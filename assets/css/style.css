@@ -24,6 +24,58 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  
+  flex-wrap: wrap;
+}
+
+.circle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.progress-ring {
+  transform: rotate(-90deg); /* Start progress ring from top */
+}
+
+.bg {
+  fill: none;
+  stroke: grey;
+  stroke-width: 10;
+}
+
+.progress {
+  fill: none;
+  stroke: blueviolet;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 339.29; /* 2πr, r = 54 */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.number {
+  position: absolute;
+  top: 42px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  pointer-events: none;
+}
+
+.label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  font-weight: bold;
+}
 
 li {
   z-index: 2;
