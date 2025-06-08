@@ -842,96 +842,75 @@ section {
   outline: none;
   cursor: pointer;
 }
-.about .flip-clock {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  perspective: 1000px;
+.base-timer__path-remaining.green { stroke: green; }
+.base-timer__path-remaining.orange { stroke: orange; }
+.base-timer__path-remaining.red { stroke: red; }
+/* plus your layout styles */
+
+.app {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
 }
 
-.flip-card {
+.base-timer {
   position: relative;
-  width: 100px;
-  height: 140px;
-  margin: 0 5px;
+  width: 300px;
+  height: 300px;
 }
 
-.flip-card div {
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 300px;
+  height: 300px;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.5em;
-  font-weight: 700;
-  background: #2a2a2a;
-  color: #ffffff;
-  border-radius: 8px;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transform-origin: bottom;
-  perspective: 1000px;
+  font-size: 48px;
 }
 
-.flip-card div::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #161616;
-  transform: translateZ(-1px) rotateX(2deg);
-  border-radius: 8px;
-}
 
-.flip-card div::after {
-  content: "";
-  position: absolute;
-  top: 60%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(to bottom, #655366 0%, transparent 100%);
-  box-shadow: 0 0 8px rgba(101, 83, 102, 0.5);
-}
 
-.flip-card span {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7em;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
-@keyframes flip {
-  0% {
-    transform: rotateX(0deg);
-    transform-origin: bottom;
-  }
-  50% {
-    transform: rotateX(-90deg);
-    opacity: 0.4;
-  }
-  100% {
-    transform: rotateX(0deg);
-    transform-origin: bottom;
-  }
-}
-.flipping {
-  animation: flip 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.faq .faq-list .icon-help {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  left: 20px;
-  color: var(--primary-purple);
-}
+
 
 .faq .faq-list .icon-show,
 .faq .faq-list .icon-close {
